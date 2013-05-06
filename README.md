@@ -1,16 +1,43 @@
-ofxEmotiv
+NotANumberLogger
 =========
+Aplicación para conectarse con el sdk para el emotiv headset y obtener
+toda la información de las lecturas.
 
-Ejemplos del sdk de Emotiv modificados para utilizarlos dentro de OpenFrameworks.
+Variables:
+14 canales EEG
+	AF3,F7,F3, FC5, T7, P7, O1, O2,P8, T8, FC6, F4,F8, AF4
+Giroscopio
+	GYROX
+	GYROY
 
-El SDK esta hecho para windows, así que solo incluyo las soluciones para 
-Visual C++ 2010
+Miscelánea
+	COUNTER
+	TIMESTAMP
+	FUNC_ID
+	FUNC_VALUE
+	MARKER
+	SYNC_SIGNAL
+	
+Expressiv Suite
+	Expresiones faciales
+Afectiv Suite
+	Engagement
+	Frustration
+	Meditation
+	Excitement
+Cognitiv Suite
+	PUSH
+	PULL
+	ROTATE_LEFT
+	ROTATE_RIGHT
+	LEFT
+	RIGHT
+	UP
+	DOWN
+	APPEAR
+	DISSAPEAR
+	
 
-Incluyo instrucciones para saber en donde copiar los archivos del SDK.
-
-Colocar en el folder de apps de openframeworks.
-
-Compilado contra la versión .74 del framework.
 
 Para saber mas:
 
