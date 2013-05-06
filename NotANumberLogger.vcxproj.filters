@@ -185,6 +185,9 @@
     <ClInclude Include="..\..\..\addons\ofxXmlSettings\libs\tinyxml.h">
       <Filter>addons\ofxXmlSettings\libs</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxEmotiv\src\emotiv.h">
+      <Filter>addons\ofxEmotiv\src</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxEmotiv\src\ofxEmotiv.h">
       <Filter>addons\ofxEmotiv\src</Filter>
     </ClInclude>
@@ -308,8 +311,8 @@
     <ClInclude Include="..\..\..\addons\ofxUI\src\ofxUIWidgetWithLabel.h">
       <Filter>addons\ofxUI\src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxEmotiv\src\emotiv.h">
-      <Filter>addons\ofxEmotiv\src</Filter>
+    <ClInclude Include="src\eventsObject.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

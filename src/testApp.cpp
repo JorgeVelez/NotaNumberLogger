@@ -2,13 +2,20 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
-	
+	ofBackground(50,50,50);
 
-	ofAddListener(logger.elEventoEmo, this, &testApp::loggerHandler);
+    enabled=false;
 
-	logger.init();
 
+	// add the newFloat method to listen for eventsAddon newFloatEvent
+	ofAddListener(evObject.newFloatEvent,this,&testApp::newFloat);
+
+	// add the newFloat method to listen for eventsAddon newFloatEvent
+	ofAddListener(evObject.newIntEvent,this,&testApp::newInt);
+
+	ofAddListener(logger.elEventoEmo,this,&testApp::loggerHandler);
 }
+
 
 //--------------------------------------------------------------
 void testApp::update(){
@@ -17,17 +24,28 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
-
+	ofDrawBitmapString(floatMsg,20,20);
+	ofDrawBitmapString(intMsg,20,40);
+	ofDrawBitmapString("click to enable/disable events",20,60);
 }
 
 //--------------------------------------------------------------
-void testApp::loggerHandler(EmoStateHandle va){
-
+void testApp::newFloat(float & f){
+	floatMsg 	= "newFloat event:  " + ofToString(f);
 }
 
 //--------------------------------------------------------------
-void testApp::keyPressed(int key){
+void testApp::newInt(int & i){
+	intMsg	 	= "newInt   event:  " + ofToString(i);
+}
 
+void testApp::loggerHandler(EmoStateHandle & va){
+	
+			std::cout << "before ifxxx";
+}
+
+//--------------------------------------------------------------
+void testApp::keyPressed  (int key){
 }
 
 //--------------------------------------------------------------
@@ -47,6 +65,12 @@ void testApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void testApp::mousePressed(int x, int y, int button){
+    if(enabled)
+        evObject.disable();
+    else
+        evObject.enable();
+
+    enabled=!enabled;
 
 }
 
@@ -69,3 +93,6 @@ void testApp::gotMessage(ofMessage msg){
 void testApp::dragEvent(ofDragInfo dragInfo){ 
 
 }
+
+		
+
