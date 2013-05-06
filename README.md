@@ -62,5 +62,5 @@ Version 0.3.0
 
 -----------------------------------------
 
-![Alt text](/screenshots/descansi.jpg?raw=true)
+![Alt text](https://raw.github.com/JorgeVelez/NotaNumberLogger/master/screenshots/desncasi.jpg?raw=true)
 
